@@ -16,19 +16,19 @@ type ArticleButtonCanvasProps = {
 export const ArticleButtonCanvas = () => {
   return (
     <a href="#">
-      <article className="group relative w-full h-96 p-5 flex flex-col gap-4 justify-end items-start bg-background/0 hover:bg-background/75 transition-colors duration-300">
+      <article className="group relative w-full h-96 p-5 flex flex-col gap-4 justify-end items-start bg-black/0 hover:bg-black/75 transition-colors duration-300">
         {/** Category */}
-        <p className="bg-background font-bold px-4 py-1 text-sm transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
+        <p className="bg-black text-white font-bold px-4 py-1 text-sm transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
           Economics
         </p>
 
         {/** Name */}
-        <h2 className="bg-background font-bold text-3xl px-4 py-1 transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
+        <h2 className="bg-black text-white font-bold text-3xl px-4 py-1 transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
           The economic impacts of Big Chungus eating the world
         </h2>
 
         {/** Profile Picture and article information */}
-        <footer className="flex flex-row gap-x-4 gap-y-2 flex-wrap items-center text-sm">
+        <footer className="flex flex-row gap-x-4 gap-y-2 flex-wrap items-center text-sm group-hover:text-primary text-white transition-colors duration-300">
           {/** I decided not to put a figure around this profile picture image so the footer is more clear */}
           <figure className="flex items-center">
             <img

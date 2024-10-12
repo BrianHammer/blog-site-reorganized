@@ -48,7 +48,9 @@ const Footer = () => {
           <a href="#" className="text-xl font-bold">
             Blogging
           </a>
-          <a className="text-sm " href="">Created by Brian Hammer</a>
+          <a className="text-sm " href="https://github.com/BrianHammer">
+            Created by Brian Hammer
+          </a>
         </div>
 
         <span>

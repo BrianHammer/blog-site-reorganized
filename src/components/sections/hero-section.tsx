@@ -27,7 +27,7 @@ export const HeroSection = () => {
           </time>
         </header>
 
-        <ul>
+        <ul className="flex flex-col gap-4">
           <li className="border-t border-gray">
             <ArticleButtonListItem />
           </li>

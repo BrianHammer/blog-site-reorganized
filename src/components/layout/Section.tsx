@@ -8,7 +8,7 @@ export const Section = ({
   className?: string;
 }) => {
   return (
-    <section className={cn(className, "px-5 container mx-auto pb-16")}>
+    <section className={cn("px-5 container mx-auto py-16", className)}>
       {children}
     </section>
   );

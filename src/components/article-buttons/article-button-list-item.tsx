@@ -41,11 +41,11 @@ export const ArticleButtonListItem = () => {
 
 export const ArticleButtonListItemWithAuthor = () => {
   return (
-    <a href="#">
+    <a href="#" className="">
       <article className="group flex flex-row gap-4 w-full items-center">
         <figure
           className={
-            "text-secondary w-24 h-24 inline-block relative rounded-full overflow-hidden flex-shrink-0 "
+            "text-white w-24 h-24 inline-block relative rounded-full overflow-hidden flex-shrink-0 "
           }
         >
           <img
@@ -63,9 +63,10 @@ export const ArticleButtonListItemWithAuthor = () => {
             </span>
           </div>
         </figure>
-        <div className="flex flex-col gap-2">
+
+        <div className="flex flex-col gap-2 text-foreground/70 group-hover:text-foreground/100 transition-colors duration-300">
           <header className="">
-            <h3 className="font-bold text-foreground text-xl transition-colors duration-300 group-hover:text-light-gray/50">
+            <h3 className="font-bold text-xl">
               20 Ya Books That Will Get You Pumped for Study Abroad
             </h3>
           </header>

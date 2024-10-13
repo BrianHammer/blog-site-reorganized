@@ -3,16 +3,18 @@ import { ArticleButtonCanvas } from "../article-buttons/article-button-canvas";
 import { ArticleButtonListItem } from "../article-buttons/article-button-list-item";
 import { Section } from "../layout/Section";
 
-export const HeroSection = () => {
+export const HeroSection = ({ className }: { className?: string }) => {
   return (
-    <Section>
+    <Section className={className}>
       {/** Section is a repeated layout...*/}
+
+      {/*
       <header className="py-5">
-        <h1 className="font-bold text-4xl capitalize hidden">
+        <h1 className="font-bold text-4xl capitalize">
           Most up to date information on stuff
         </h1>
       </header>
-
+      */}
       <ArticleButtonCanvas />
 
       <section>

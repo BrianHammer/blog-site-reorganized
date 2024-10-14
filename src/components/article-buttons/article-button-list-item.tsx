@@ -1,4 +1,4 @@
-import { CalendarClock, Eye } from "lucide-react";
+import { ArticlePublishingInfo } from "./article-publishing-info";
 
 export const ArticleButtonListItem = () => {
   return (
@@ -72,23 +72,12 @@ export const ArticleButtonListItemWithAuthor = () => {
           </header>
 
           {/** This was copied and slightly modified from the hero section... */}
-          <footer className="flex flex-row gap-x-4 gap-y-2 flex-wrap items-center text-xs text-gray">
-            <p>
-              By <strong className="font-bold">Ligma</strong>{" "}
-            </p>
 
-            <time
-              itemProp="date created"
-              dateTime="2024-08-26"
-              className="flex flex-row gap-1 items-center"
-            >
-              <CalendarClock className="w-5 h-5" /> Febuary 26, 2024
-            </time>
-
-            <p className="flex flex-row gap-1 items-center">
-              <Eye className="w-5 h-5" /> 23 Views
-            </p>
-          </footer>
+          <ArticlePublishingInfo
+            author="Bowls"
+            published={new Date()}
+            views={12345}
+          />
         </div>
       </article>
     </a>

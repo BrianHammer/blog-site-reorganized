@@ -1,3 +1,4 @@
+import { ArticleBackgroundSection } from "@/components/sections/article-background-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PopularSection } from "@/components/sections/popular-section";
 import { TrendingSection } from "@/components/sections/trending-section";
@@ -11,6 +12,7 @@ export default function Home() {
       <TrendingSection />
       <PopularSection />
       <WorkingLifeSection className="pt-0" />
+      <ArticleBackgroundSection className="" />
     </main>
   );
 }

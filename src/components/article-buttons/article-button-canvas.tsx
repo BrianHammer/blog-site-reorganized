@@ -1,4 +1,6 @@
 import { CalendarClock, Eye } from "lucide-react";
+import { ArticlePublishingInfo } from "./article-publishing-info";
+import { ArticleButtonImageHover } from "./article-button-image-hover";
 
 type ArticleButtonCanvasProps = {
   title: string;
@@ -27,36 +29,12 @@ export const ArticleButtonCanvas = () => {
           The economic impacts of Big Chungus eating the world
         </h2>
 
-        {/** Profile Picture and article information */}
-        <footer className="flex flex-row gap-x-4 gap-y-2 flex-wrap items-center text-sm group-hover:text-primary text-white transition-colors duration-300">
-          {/** I decided not to put a figure around this profile picture image so the footer is more clear */}
-          <figure className="flex items-center">
-            <img
-              src="/dummy-pfp/man.png"
-              alt="Profile Picture"
-              className="h-12 w-12 rounded-full"
-            />
-            <figcaption className="sr-only">
-              Profile picture of Brian Hammer
-            </figcaption>
-          </figure>
-
-          <p>
-            By <strong className="font-bold">Brian Hammer</strong>{" "}
-          </p>
-
-          <time
-            itemProp="date created"
-            dateTime="2024-08-26"
-            className="flex flex-row gap-1 items-center"
-          >
-            <CalendarClock className="w-5 h-5" /> Febuary 26, 2024
-          </time>
-
-          <p className="flex flex-row gap-1 items-center">
-            <Eye className="w-5 h-5" /> 23 Views
-          </p>
-        </footer>
+        <ArticlePublishingInfo
+          className="group-hover:text-primary text-white transition-colors duration-300 text-sm"
+          author={"Brian Hammer"}
+          published={new Date()}
+          views={999999999}
+        />
 
         <figure className="absolute top-0 bottom-0 left-0 right-0 -z-10">
           <img
@@ -65,6 +43,38 @@ export const ArticleButtonCanvas = () => {
             className="object-cover w-full h-96"
           />
         </figure>
+      </article>
+    </a>
+  );
+};
+
+export const ArticleButtonCanvasForList = () => {
+  return (
+    <a href="#">
+      <article className="group relative w-full h-96 md:h-72 mb-28">
+        <ArticleButtonImageHover
+          imageUrl={"/dummy-article-images/image-6.jpg"}
+          title={"Title"}
+        />
+        {/** The title, category, author, etc. */}
+        <div className="absolute bottom-0 p-5 flex flex-col gap-4 justify-end items-start translate-y-28  ">
+          <p className="bg-black font-bold px-4 py-1 text-xs transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
+            Engineering
+          </p>
+
+          {/** Name */}
+          <h3 className="bg-black font-bold text-3xl px-4 py-1 transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
+            Math Good English Bad
+          </h3>
+
+          {/** Profile Picture and article information */}
+
+          <ArticlePublishingInfo
+            author={"Brian H"}
+            published={new Date()}
+            views={1244.555}
+          />
+        </div>
       </article>
     </a>
   );

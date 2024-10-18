@@ -15,16 +15,17 @@ type ArticleButtonCanvasProps = {
   authorPfpUrl?: string;
 };
 
-export const ArticleButtonCanvas = () => {
+/*
+
+export const ArticleButtonCanvasOld = () => {
   return (
     <a href="#">
       <article className="group relative w-full h-96 p-5 flex flex-col gap-4 justify-end items-start bg-black/0 hover:bg-black/75 transition-colors duration-300">
-        {/** Category */}
+
         <p className="bg-black text-white font-bold px-4 py-1 text-sm transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
           Economics
         </p>
 
-        {/** Name */}
         <h2 className="bg-black text-white font-bold text-3xl px-4 py-1 transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
           The economic impacts of Big Chungus eating the world
         </h2>
@@ -43,6 +44,39 @@ export const ArticleButtonCanvas = () => {
             className="object-cover w-full h-96"
           />
         </figure>
+      </article>
+    </a>
+  );
+};
+*/
+export const ArticleButtonCanvas = () => {
+  return (
+    <a href="#">
+      <article className="group relative w-full h-96">
+        <ArticleButtonImageHover
+          className="w-full h-full"
+          imageUrl={"/dummy-article-images/image-6.jpg"}
+          title={"Title"}
+        />
+        {/** The title, category, author, etc. */}
+        <div className="absolute bottom-0 p-5 flex flex-col gap-4 justify-end items-start ">
+          <p className="bg-black font-bold px-4 py-1 text-xs transition-colors duration-300 group-hover:bg-primary group-hover:text-background">
+            Engineering
+          </p>
+
+          {/** Name */}
+          <h3 className="bg-black font-bold text-3xl px-4 py-1 transition-colors duration-300 group-hover:bg-primary group-hover:text-black">
+            Math Good English Bad
+          </h3>
+
+          {/** Profile Picture and article information */}
+
+          <ArticlePublishingInfo
+            author={"Brian H"}
+            published={new Date()}
+            views={1244.555}
+          />
+        </div>
       </article>
     </a>
   );
